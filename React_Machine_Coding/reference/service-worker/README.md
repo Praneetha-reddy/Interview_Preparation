@@ -17,7 +17,7 @@ This project is a small React application that demonstrates how a service worker
 2. When a push event is received, the service worker parses the payload and creates a normalized notification object in public/sw.js.
 3. The service worker saves that object into IndexedDB and posts a message to the active React client.
 4. The React app listens for the message in src/App.jsx, adds the new notification to the visible list, and updates the unread count.
-5. On refresh, the app reads the stored notifications from IndexedDB using src/utils/db.js and restores them in the UI.
+5. On refresh, the app reads the stored notifications from IndexedDB and restores them in the UI.
 6. Clicking a notification marks it as read and writes the updated state back to IndexedDB.
 
 ## IndexedDB operations
